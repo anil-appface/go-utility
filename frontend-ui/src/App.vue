@@ -2,13 +2,12 @@
   <div class="page-container">
 
      <md-tabs>
-      <md-tab id="tab-home" md-label="Home">
+      <md-tab id="tab-home" md-label="Exercise 1">
         <Exercise1 />
       </md-tab>
 
-      <md-tab id="tab-pages" md-label="Pages">
-        Pages tab
-        <p>Unde provident nemo reiciendis officia, possimus repellendus. Facere dignissimos dicta quis rem. Aliquam aspernatur dolor atque nisi id deserunt laudantium quam repellat.</p>
+      <md-tab id="tab-pages" md-label="Exercise 2">
+        <Exercise2 />  
       </md-tab>
 
       <md-tab id="tab-posts" md-label="Posts" >
@@ -38,8 +37,14 @@
 <script>
 
 import Exercise1 from './components/Exercise1'
+import Exercise2 from './components/Exercise2'
+
 export default {
-   name: 'Waterfall',
-  components: {Exercise1}
+  name: 'Waterfall',
+  components: {
+    Exercise1,
+    Exercise2
+  }
 }
+
 </script>
