@@ -35,14 +35,14 @@ func (me *exercise1Handler) GetTextAndCountForWeb(w http.ResponseWriter, r *http
 	// Get the HTML
 	resp, err := http.Get(url)
 	if err != nil {
-		fmt.Errorf("error while getting data through http: %v", err)
+		fmt.Printf("error while getting data through http: %#v", err)
 		return
 	}
 	defer resp.Body.Close()
 	// Read the response body
 	bytes, err := ioutil.ReadAll(resp.Body)
 	if err != nil {
-		fmt.Errorf("error while reading the response: %v", err)
+		fmt.Printf("error while reading the response: %#v", err)
 		return
 	}
 

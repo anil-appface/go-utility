@@ -15,10 +15,9 @@
         <p>Qui, voluptas repellat impedit ducimus earum at ad architecto consectetur perferendis aspernatur iste amet ex tempora animi, illum tenetur quae assumenda iusto.</p>
       </md-tab>
 
-      <md-tab id="tab-favorites" md-label="Favorites">
-        Favorites tab
-        <p>Maiores, dolorum. Beatae, optio tempore fuga odit aperiam velit, consequuntur magni inventore sapiente alias sequi odio qui harum dolorem sunt quasi corporis.</p>
-      </md-tab>
+      <md-tab id="tab-favorites" md-label="Exercise 4">
+       <Exercise4 />  
+       </md-tab>
     </md-tabs>
 
   </div>
@@ -38,12 +37,14 @@
 
 import Exercise1 from './components/Exercise1'
 import Exercise2 from './components/Exercise2'
+import Exercise4 from './components/Exercise4'
 
 export default {
   name: 'Waterfall',
   components: {
     Exercise1,
-    Exercise2
+    Exercise2,
+    Exercise4
   }
 }
 
