@@ -4,13 +4,14 @@
 
 1. This application require MySql database to connect with.
 
-    Change the DB details in <code>openDB() (*sql.DB, error)</code>  in <code>app.go</code> file
+    Change the DB details in <code>openDB() (*sql.DB, error)</code>  in  <a href="https://github.com/anil-appface/go-utility/blob/6377949be3244b76dbcd4afd282ffd91fdf8d62b/app.go#L40">app.go</a> file
 
 
 # Run
 
 Use  <code>go run .</code> to start the server
 
+To Install front-end app, please go through this link <a href="frontend-ui/README.md">Frontend-UI Readme</a>
 
 # Screenshots
 
