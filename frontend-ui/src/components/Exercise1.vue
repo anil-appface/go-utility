@@ -20,7 +20,12 @@
 <script>
 export default {
   name: 'Exercise1',
-  props: ['urlValue', 'result'],
+  data() {
+    return {
+      result: {},
+      urlValue:""
+    }
+  },
   methods: {
     getAllWordsWithCount: function() {
       //get all 

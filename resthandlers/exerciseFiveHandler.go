@@ -4,7 +4,6 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"sort"
 	"strconv"
 	"sync"
 
@@ -54,7 +53,9 @@ func (me *exercise5Handler) GetPrimeNumbers(w http.ResponseWriter, r *http.Reque
 	}
 
 	wg.Wait()
-	sort.Ints(primeNumbers)
+
+	//If the output require sorting, then we can uncomment the below line
+	//sort.Ints(primeNumbers)
 	json.NewEncoder(w).Encode(primeNumbers)
 
 }

@@ -15,8 +15,12 @@
 
 <script>
 export default {
-  name: "Exercise1",
-  props: ["date", "result"],
+  data(){
+    return{
+      date: undefined,
+      result: undefined
+    }
+  },
   methods: {
     getLastDayofMonth: function() {
       const requestOptions = {

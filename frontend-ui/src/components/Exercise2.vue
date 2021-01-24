@@ -28,14 +28,19 @@
 
 <script>
 export default {
-  name: 'Exercise1',
-  props: ['columnStart', 'rowCount', 'colCount', 'result'],
+  data(){
+    return {
+        columnStart: "",
+        rowCount: undefined,
+        colCount: undefined,
+        result:[]
+    }
+  },
   methods: {
     calculate: function() {
 
-        console.log(this.columnStart, this.rowCount, this.colCount)
         if (!this.columnStart || !this.rowCount || !this.colCount) {
-            alert('error')
+            alert('Please enter column start & row count & column count')
             return
         }
 
@@ -51,7 +56,6 @@ export default {
             }
             this.result.push(arr)
         }
-        console.log(this.result)
     }, 
     nextString: function(key) {
          if (key === 'Z' || key === 'z') {

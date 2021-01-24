@@ -74,8 +74,7 @@ export default {
         headers: { "Content-Type": "application/json" },
       };
       fetch(`http://localhost:8000/user/${id}`, requestOptions)
-      .then((response) => response.json())
-      .then(() => this.fetchUsers());
+      .then(() =>  this.fetchUsers());
     },
     createUser: function() {
       const requestOptions = {
@@ -107,9 +106,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.input-divs {
-  display: flex;
-}
 
 .md-field, .md-checkbox {
   width: 80%;
@@ -117,13 +113,4 @@ export default {
   margin-top: 10px; 
 }
 
-.result-div-outside {
-  display: flex;
-}
-
-.result-div-inside {
-  padding: 10px;
-  border: 1px solid black;
-  margin: 5px;
-}
 </style>

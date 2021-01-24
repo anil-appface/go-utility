@@ -16,8 +16,12 @@
 
 <script>
 export default {
-  name: "Exercise5",
-  props: ["number", "result"],
+  data(){
+      return{
+          number: undefined,
+          result: undefined
+      }
+  },
   methods: {
     getPrimeNumbers: function() {
       fetch(`http://localhost:8000/getPrimeNumbers/${this.number}`).then(
