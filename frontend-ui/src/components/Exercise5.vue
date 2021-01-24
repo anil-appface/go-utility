@@ -1,12 +1,13 @@
 <template>
   <div>
+      To display all the possible prime numbers upto given input
     <div class="input-divs">
       <md-field>
-        <label>Enter Date in format '2020-02-18T01:50'</label>
-        <md-input v-model="date"></md-input>
+        <label>Enter number</label>
+        <md-input v-model="number"></md-input>
       </md-field>
     </div>
-    <md-button class="md-primary" @click="getLastDayofMonth()">Submit</md-button>
+    <md-button class="md-primary" @click="getPrimeNumbers()">Submit</md-button>
     <span>
       {{ result }}
     </span>
@@ -15,16 +16,11 @@
 
 <script>
 export default {
-  name: "Exercise1",
-  props: ["date", "result"],
+  name: "Exercise5",
+  props: ["number", "result"],
   methods: {
-    getLastDayofMonth: function() {
-      const requestOptions = {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ Date: this.date }),
-      };
-      fetch("http://localhost:8000/getLastDayofMonth", requestOptions).then(
+    getPrimeNumbers: function() {
+      fetch(`http://localhost:8000/getPrimeNumbers/${this.number}`).then(
         async (response) => {
           this.result = await response.text();
           console.log(this.result);

@@ -18,6 +18,10 @@
       <md-tab id="tab-favorites" md-label="Exercise 4">
        <Exercise4 />  
        </md-tab>
+
+       <md-tab id="tab" md-label="Exercise 5">
+       <Exercise5 />  
+       </md-tab>
     </md-tabs>
 
   </div>
@@ -38,13 +42,15 @@
 import Exercise1 from './components/Exercise1'
 import Exercise2 from './components/Exercise2'
 import Exercise4 from './components/Exercise4'
+import Exercise5 from './components/Exercise5'
 
 export default {
   name: 'Waterfall',
   components: {
     Exercise1,
     Exercise2,
-    Exercise4
+    Exercise4,
+    Exercise5
   }
 }
 
