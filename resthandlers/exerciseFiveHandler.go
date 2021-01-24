@@ -43,7 +43,7 @@ func (me *exercise5Handler) GetPrimeNumbers(w http.ResponseWriter, r *http.Reque
 		}
 	}()
 
-	for i := 2; i < n; i++ {
+	for i := 2; i <= n; i++ {
 		wg.Add(1)
 		go func(j int) {
 			defer wg.Done()

@@ -2,24 +2,23 @@
   <div class="page-container">
 
      <md-tabs>
-      <md-tab id="tab-home" md-label="Exercise 1">
+      <md-tab id="tab-exercise1" md-label="Exercise 1">
         <Exercise1 />
       </md-tab>
 
-      <md-tab id="tab-pages" md-label="Exercise 2">
+      <md-tab id="tab-exercise2" md-label="Exercise 2">
         <Exercise2 />  
       </md-tab>
 
-      <md-tab id="tab-posts" md-label="Posts" >
-        Posts tab
-        <p>Qui, voluptas repellat impedit ducimus earum at ad architecto consectetur perferendis aspernatur iste amet ex tempora animi, illum tenetur quae assumenda iusto.</p>
-      </md-tab>
+      <md-tab id="tab-exercise3" md-label="Exercise 3" >
+         <Exercise3 />  
+     </md-tab>
 
-      <md-tab id="tab-favorites" md-label="Exercise 4">
+      <md-tab id="tab-exercise4" md-label="Exercise 4">
        <Exercise4 />  
        </md-tab>
 
-       <md-tab id="tab" md-label="Exercise 5">
+       <md-tab id="tab-exercise5" md-label="Exercise 5">
        <Exercise5 />  
        </md-tab>
     </md-tabs>
@@ -41,6 +40,7 @@
 
 import Exercise1 from './components/Exercise1'
 import Exercise2 from './components/Exercise2'
+import Exercise3 from './components/Exercise3'
 import Exercise4 from './components/Exercise4'
 import Exercise5 from './components/Exercise5'
 
@@ -49,6 +49,7 @@ export default {
   components: {
     Exercise1,
     Exercise2,
+    Exercise3,
     Exercise4,
     Exercise5
   }

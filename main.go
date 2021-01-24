@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"fmt"
 	"log"
 	"net/http"
 	"os"
@@ -11,8 +12,19 @@ import (
 
 func main() {
 
+	//Initialise MySQL for user CRUD operations
+	db, err := openDB()
+	if err != nil {
+		fmt.Printf("SQL is not connected properly, hence user CRUD operations cannot be performed")
+	}
+	defer db.Close()
+	err = initialiseTables(db)
+	if err != nil {
+		fmt.Printf("An error occured while creating a table in MySQL database, check the connection properly")
+	}
+
 	// Initialising rooutes
-	InitRoot()
+	InitRoot(db)
 
 	srv := &http.Server{
 		Addr: ":8000",
