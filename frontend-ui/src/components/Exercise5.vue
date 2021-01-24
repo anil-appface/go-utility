@@ -24,7 +24,7 @@ export default {
   },
   methods: {
     getPrimeNumbers: function() {
-      fetch(`http://localhost:8000/getPrimeNumbers/${this.number}`).then(
+      fetch(`${process.env.VUE_APP_BASE_URL}/getPrimeNumbers/${this.number}`).then(
         async (response) => {
           this.result = await response.text();
           console.log(this.result);

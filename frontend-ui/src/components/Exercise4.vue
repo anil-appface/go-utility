@@ -28,7 +28,7 @@ export default {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ Date: this.date }),
       };
-      fetch("http://localhost:8000/getLastDayofMonth", requestOptions).then(
+      fetch(`${process.env.VUE_APP_BASE_URL}/getLastDayofMonth`, requestOptions).then(
         async (response) => {
           this.result = await response.text();
           console.log(this.result);

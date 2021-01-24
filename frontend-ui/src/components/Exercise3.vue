@@ -64,7 +64,7 @@ export default {
   },
   methods: {
     fetchUsers: function() {
-      fetch("http://localhost:8000/users")
+      fetch(`${process.env.VUE_APP_BASE_URL}/users`)
       .then((response) => response.json())
       .then(result => this.users = result);
     },
@@ -73,7 +73,7 @@ export default {
         method: "DELETE",
         headers: { "Content-Type": "application/json" },
       };
-      fetch(`http://localhost:8000/user/${id}`, requestOptions)
+      fetch(`${process.env.VUE_APP_BASE_URL}/user/${id}`, requestOptions)
       .then(() =>  this.fetchUsers());
     },
     createUser: function() {
@@ -82,7 +82,7 @@ export default {
         headers: { "Content-Type": "application/json" },
          body: JSON.stringify({ loginId: this.loginId, fullName: this.fullName, id: this.id, isEnabled: this.isEnabled }),
       };
-      fetch(`http://localhost:8000/user`, requestOptions)
+      fetch(`${process.env.VUE_APP_BASE_URL}/user`, requestOptions)
       .then((response) => response.json())
       .then(() => {
           this.fetchUsers()

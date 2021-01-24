@@ -30,7 +30,7 @@ export default {
     getAllWordsWithCount: function() {
       //get all 
       console.log(this.urlValue)
-       fetch(`http://localhost:8000/webscrape?url=${this.urlValue}`)
+       fetch(`${process.env.VUE_APP_BASE_URL}/webscrape?url=${this.urlValue}`)
     .then(response => response.json())
     .then(data => (
       this.result = data
